@@ -7,4 +7,4 @@ To train the machine learning model, we have used a [dataset](www.kaggle.com/dat
 ## Main Tools Used
 - Python - the coding language that was used by this project
 - Keras - the deep learning framework that is used to train this machine learning model
-- OpenCV - the library that was used to process images when training the model and also to access the webcam
+- OpenCV - the library that was used to process images when training the model and also to access the webcam to detect faces.
