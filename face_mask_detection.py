@@ -15,7 +15,7 @@ webcam_feed_detecting = cv.VideoCapture(0)
 
 haar_face = cv.CascadeClassifier('haar_face.xml')
 
-loaded_model = tf.keras.models.load_model('model.h5')
+loaded_model = tf.keras.models.load_model('./ML/model.h5')
 classes = ["wearing a mask", "wearing no mask"]
 
 def rescaleFrame(frame, scale=1):
@@ -26,9 +26,9 @@ def rescaleFrame(frame, scale=1):
 
     return cv.resize(frame, dimensions, interpolation = cv.INTER_AREA)
 
-intro = cv.imread("Introduction.jpg")
-intro = rescaleFrame(intro, scale = 0.25)
-cv.imshow("Introduction", intro)
+menu = cv.imread("Menu.jpg")
+menu = rescaleFrame(menu, scale = 0.25)
+cv.imshow("Menu", menu)
 
 if cv.waitKey(0) & 0xFF==ord('s'):
 
