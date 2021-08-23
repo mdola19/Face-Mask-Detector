@@ -9,13 +9,13 @@ from pygame import mixer
 import time
 
 mixer.init()
-mixer.music.load('noMaskAudio.mp3')
+mixer.music.load('./Resources/noMaskAudio.mp3')
 
 webcam_feed_detecting = cv.VideoCapture(0)
 
-haar_face = cv.CascadeClassifier('haar_face.xml')
+haar_face = cv.CascadeClassifier('./Resources/haar_face.xml')
 
-loaded_model = tf.keras.models.load_model('./ML/model.h5')
+loaded_model = tf.keras.models.load_model('./Machine Learning Model/model.h5')
 classes = ["wearing a mask", "wearing no mask"]
 
 def rescaleFrame(frame, scale=1):
@@ -26,7 +26,7 @@ def rescaleFrame(frame, scale=1):
 
     return cv.resize(frame, dimensions, interpolation = cv.INTER_AREA)
 
-menu = cv.imread("Menu.jpg")
+menu = cv.imread("./Resources/Menu.jpg")
 menu = rescaleFrame(menu, scale = 0.25)
 cv.imshow("Menu", menu)
 
