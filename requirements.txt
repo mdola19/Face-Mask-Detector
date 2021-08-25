@@ -1,0 +1,4 @@
+opencv-python==4.5.3.56
+pygame==2.0.1
+tensorflow==2.5.0
+matplotlib==3.4.3

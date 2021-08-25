@@ -4,12 +4,11 @@ from tensorflow.keras.models import load_model
 import tensorflow as tf
 from tensorflow import keras
 import matplotlib.pyplot as plt
-from gtts import gTTS
 from pygame import mixer
 import time
 
 mixer.init()
-mixer.music.load('./Resources/noMaskAudio.mp3')
+mixer.music.load('./Resources/noMaskAudio.wav')
 
 webcam_feed_detecting = cv.VideoCapture(0)
 
